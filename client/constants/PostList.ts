@@ -33,6 +33,7 @@ const PostList: Post[] = [
     { slug: 'distinguish-between-left-and-right-mouse-clicks', zh: "区分鼠标左键和右键", level: 'Basic', zhLevel: '基础' },
     { slug: 'download-a-file', zh: "下载一个文件", level: 'Intermediate', zhLevel: '中级' },
     { slug: 'drag-and-drop-element-in-a-list', zh: "将元素拖拽到列表中", level: 'Advanced', zhLevel: '高级', },
+    { slug: 'drag-and-drop-table-row', zh: "拖动表格行", level: 'Advanced', zhLevel: '高级', },
     { slug: 'execute-code-when-the-document-is-ready', zh: "等 HTML 元素(document 对象)准备好之后再运行代码", level: 'Basic', zhLevel: '基础' },
     { slug: 'export-a-table-to-csv', zh: "将表格导出为CSV文件", level: 'Intermediate', zhLevel: '中级' },
     { slug: 'get-css-styles-of-an-element', zh: "获取元素的 CSS 样式", level: 'Basic', zhLevel: '基础' },
