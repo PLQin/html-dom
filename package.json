@@ -6,7 +6,11 @@
         "email": "me@phuoc.ng",
         "url": "https://twitter.com/nghuuphuoc"
     },
+<<<<<<< HEAD
     "homepage": "https://www.htmldom.cn",
+=======
+    "homepage": "https://htmldom.cn",
+>>>>>>> 2c813865419652f5ccf86588cf9f5f207e1027bd
     "keywords": [
         "dom",
         "document object model",
@@ -22,6 +26,12 @@
     },
     "license": "MIT",
     "scripts": {
+        "nginx:copy": "npm run nginx:copy-public && npm run nginx:copy-demo",
+        "nginx:copy-public": "rimraf dist && mkdir dist && cp -rf public/* dist",
+        "nginx:copy-demo": "cp -rf demo dist && postcss vendors/tailwind@1.1.4/tailwind.css -o dist/demo/styles.css",
+        "nginx:dev": "npm run nginx:copy && webpack --mode development",
+        "nginx:dev-server": "npm run nginx:copy && webpack-dev-server",
+
         "copy": "npm run copy:public && npm run copy:demo",
         "copy:public": "rimraf dist && mkdir dist && cp -rf public/* dist",
         "copy:demo": "cp -rf demo dist && NODE_ENV=production postcss vendors/tailwind@1.1.4/tailwind.css -o dist/demo/styles.css",

@@ -14,7 +14,7 @@ const HomePage = () => {
                 <meta name='description' content='Common tasks of managing HTML DOM with vanilla JavaScript' />
             </Helmet>
 
-            <h1 className='font-bold mt-32 text-center text-2xl sm:text-4xl px-1'>如何管理 HTML DOM</h1>
+            <h1 className='font-bold mt-32 text-center text-2xl sm:text-4xl px-1'>使用原生JS操作DOM</h1>
             <h3 className='font-light mb-1 text-2xl sm:text-3xl text-center'>
                 只用 <span className='bg-blue-200 p-1'>原生 JavaScript</span> 语言?
             </h3>
