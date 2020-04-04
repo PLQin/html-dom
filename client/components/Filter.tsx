@@ -15,9 +15,8 @@ const Filter: React.FC<{}> = () => {
 
     const allPosts = PostList.map((s) => ({ slug: unslugify(s.slug), zh: s.zh }));
     const posts = keyword
-        ? allPosts.filter((v) => v.slug.toLowerCase().includes(keyword.toLowerCase()))
+        ? allPosts.filter((v) => v.zh.includes(keyword) || v.slug.toLowerCase().includes(keyword.toLowerCase()))
         : [];
-
     return (
         <div className='w-full relative'>
             <div className={`border-b border-gray-400`}>
