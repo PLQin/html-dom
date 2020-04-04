@@ -77,7 +77,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         historyApiFallback: true,
-        port: 1234,
+        port: 8080,
     },
     plugins,
     // See https://webpack.js.org/guides/caching/
