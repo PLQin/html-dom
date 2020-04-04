@@ -20,7 +20,7 @@ const HomePage = () => {
             <div className="mb-12 text-center">
                 <a
                     className="text-2xl bg-gray-400 px-4 py-2"
-                    href="https://github.com/phuoc-ng/html-dom"
+                    href="https://github.com/PLQin/html-dom"
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                     target="_blank"
@@ -44,6 +44,7 @@ const HomePage = () => {
                                         <span className='mr-2'>{idx} — {post.zh || unslugify(post.slug)}</span>
                                         <span
                                             className={`
+
                                             p-1 text-sm text-white rounded
                                             ${post.level === 'Basic' ? 'bg-gray-600' : ''}
                                             ${post.level === 'Intermediate' ? 'bg-blue-600' : ''}

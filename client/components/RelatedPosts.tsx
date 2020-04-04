@@ -20,6 +20,7 @@ const RelatedPosts: React.FC<RelatedPostsProps> = ({ slugs }) => {
                     <li key={post.slug} className='mb-2'>
                         <Link
                             to={`/${post.slug}`}
+                            target='_blank'
                             className='bg-gray-200 px-2 py-1 flex items-center justify-between'
                         >
                             <span>{post.zh || unslugify(post.slug)}</span>

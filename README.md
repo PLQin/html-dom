@@ -28,7 +28,7 @@ Web开发发展的非常快，我仍然记得使用[jQuery](https://jquery.com "
 1. 克隆项目:
 
 ~~~ console
-$ git clone https://github.com/phuoc-ng/html-dom
+$ git clone https://github.com/PLQin/html-dom
 ~~~
 
 2. 安装项目依赖:
@@ -57,9 +57,9 @@ $ npm run dev-server
 成为我的朋友吧:
 * [Twitter](https://twitter.com/nghuuphuoc)
 * [dev.to](https://dev.to/phuocng)
-* [Github](https://github.com/phuoc-ng)
+* [Github](https://github.com/PLQin)
 
-## 产品展示
+## 作品
 
 你可能会对我的项目感兴趣:
 

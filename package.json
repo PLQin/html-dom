@@ -15,10 +15,10 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/phuoc-ng/html-dom"
+        "url": "https://github.com/PLQin/html-dom"
     },
     "bugs": {
-        "url": "https://github.com/phuoc-ng/html-dom/issues"
+        "url": "https://github.com/PLQin/html-dom/issues"
     },
     "license": "MIT",
     "scripts": {

@@ -27,13 +27,13 @@ const previewEle = document.getElementById('preview');
 
 ~~~ javascript
 fileEle.addEventListener('change', function(e) {
-    // Get the selected file
+    // 获取选定的文件
     const file = e.target.files[0];
 
-    // Create a new URL that references to the file
+    // 创建一个引用该文件的新URL
     const url = URL.createObjectURL(file);
 
-    // Set the source for preview element
+    // 设置预览元素的源
     previewEle.src = url;
 });
 ~~~
@@ -47,7 +47,7 @@ fileEle.addEventListener('change', function(e) {
 
     const reader = new FileReader();
     reader.addEventListener('load', function() {
-        // Set the source for preview element
+        // 设置预览元素的源
         previewEle.src = reader.result;
     });
 

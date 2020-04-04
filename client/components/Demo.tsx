@@ -20,10 +20,10 @@ const Demo: React.FC<DemoProps> = ({ src }) => {
                 <div className='mr-2'>Demo</div>
                 (<a
                     className='underline'
-                    href={`https://github.com/phuoc-ng/html-dom/blob/master/${src}/index.html`}
+                    href={`https://github.com/PLQin/html-dom/blob/master/${src}/index.html`}
                     target='_blank'
                 >
-                    source
+                    源码
                 </a>)
             </div>
             <div className='border border-gray-400'>
