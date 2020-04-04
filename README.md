@@ -81,6 +81,6 @@ Open http://localhost:8080 in your browser to see it in action.
 | [CSS Layout](https://csslayout.io)                | A collection of popular layouts and patterns made with CSS        |
 | [Fake Numbers](https://fakenumbers.io)            | Generate fake and valid numbers                                   |
 | [Form Validation](https://formvalidation.io)      | The best validation library for JavaScript                        |
-| [HTML DOM](https://htmldom.cn)                    | 使用原生JS操作DOM with vanilla JavaScript                    |
+| [HTML DOM](https://htmldom.cn)                    | 使用原生JS操作DOM                                                  |
 | [React PDF Viewer](https://react-pdf-viewer.dev)  | A React component to view a PDF document                          |
 >>>>>>> 2c813865419652f5ccf86588cf9f5f207e1027bd

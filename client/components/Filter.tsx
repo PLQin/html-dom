@@ -24,7 +24,7 @@ const Filter: React.FC<{}> = () => {
                 <input
                     ref={searchBoxRef}
                     className='border-none w-full p-2 flex-1'
-                    placeholder='Filter'
+                    placeholder='搜索'
                     value={keyword}
                     onChange={onChangeSearchBox}
                 />

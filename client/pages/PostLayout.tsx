@@ -40,7 +40,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({ children, slug }) => {
                     style={{ textDecoration: 'none' }}
                     target="_blank"
                 >
-                    编辑页面内容
+                    编辑这个页面
                 </a>
             </div>
 
