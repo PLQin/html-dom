@@ -22,11 +22,18 @@
     },
     "license": "MIT",
     "scripts": {
+        "nginx:copy": "npm run nginx:copy-public && npm run nginx:copy-demo",
+        "nginx:copy-public": "rimraf dist && mkdir dist && cp -rf public/* dist",
+        "nginx:copy-demo": "cp -rf demo dist && postcss vendors/tailwind@1.1.4/tailwind.css -o dist/demo/styles.css",
+        "nginx:dev": "npm run nginx:copy && webpack --mode development",
+        "nginx:dev-server": "npm run nginx:copy && webpack-dev-server",
+
         "copy": "npm run copy:public && npm run copy:demo",
         "copy:public": "rimraf dist && mkdir dist",
         "copy:demo": "postcss vendors/tailwind@1.1.4/tailwind.css -o dist/demo/styles.css",
         "dev": "npm run copy && webpack --mode development",
         "dev-server": "npm run copy && webpack-dev-server",
+        
         "build": "npm run copy && webpack --mode production && npm run export",
         "export": "react-snap",
         "deploy": "npm run build && netlify deploy --dir=dist --prod"
