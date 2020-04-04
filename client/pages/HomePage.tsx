@@ -10,15 +10,12 @@ const HomePage = () => {
     return (
         <Layout>
             <Helmet>
-                <title>HTML DOM - Common tasks of managing HTML DOM with vanilla JavaScript</title>
-                <meta name='description' content='Common tasks of managing HTML DOM with vanilla JavaScript' />
+                <title>HTML DOM - 用原生JavaScript操作HTML_DOM</title>
+                <meta name='description' content='用原生JavaScript操作HTML_DOM' />
             </Helmet>
 
             <h1 className='font-bold mt-32 text-center text-2xl sm:text-4xl px-1'>使用原生JS操作DOM</h1>
-            <h3 className='font-light mb-1 text-2xl sm:text-3xl text-center'>
-                with <span className='bg-blue-200 p-1'>vanilla JavaScript</span> only?
-            </h3>
-            <h4 className='font-light mb-16 text-xl text-center italic'>for modern browsers and IE 11+</h4>
+            <h4 className='font-light mb-16 text-xl text-center italic'>仅适用于现代浏览器或IE11+</h4>
 
             <div className="mb-12 text-center">
                 <a

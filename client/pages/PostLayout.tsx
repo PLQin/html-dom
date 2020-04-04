@@ -35,7 +35,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({ children, slug }) => {
                     style={{ textDecoration: 'none' }}
                     target="_blank"
                 >
-                    Edit this page
+                    编辑这个页面
                 </a>
             </div>
 
@@ -49,7 +49,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({ children, slug }) => {
                         to={`/${slugify(PostList[index - 1].slug)}`}
                         title={unslugify(PostList[index - 1].slug)}
                     >
-                        ← {unslugify(PostList[index - 1].slug)}
+                        â {unslugify(PostList[index - 1].slug)}
                     </Link>
                 </div>
             )}
@@ -60,7 +60,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({ children, slug }) => {
                         to={`/${slugify(PostList[index + 1].slug)}`}
                         title={unslugify(PostList[index + 1].slug)}
                     >
-                        {unslugify(PostList[index + 1].slug)} →
+                        {unslugify(PostList[index + 1].slug)} â
                     </Link>
                 </div>
             )}

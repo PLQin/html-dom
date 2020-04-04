@@ -4,7 +4,7 @@ const SubscribeForm: React.FC<{}> = () => {
     return (
         <div className='text-center mb-8'>
             <div className='mb-4'>
-                Hit the Subscribe button for the latest news on my tools. No spam. Ever!
+                点击订阅按钮获取我的最新消息。不会有垃圾邮件 !
             </div>
             <form
                 action="https://csslayout.us4.list-manage.com/subscribe/post?u=77d0bf6497a2cdbb36f08587c&amp;id=e8a912009a"
@@ -28,7 +28,7 @@ const SubscribeForm: React.FC<{}> = () => {
                     name="subscribe"
                     className='bg-blue-600 border border-blue-600 px-4 py-2 text-white'
                 >
-                    Subscribe
+                    订阅
                 </button>
             </form>
         </div>

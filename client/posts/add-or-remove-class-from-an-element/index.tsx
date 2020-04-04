@@ -8,29 +8,29 @@ export default () => {
 <>
 <Markdown
     content={`
-## Add a class to an element
+## 向元素中添加一个 class
 
 Note that multiple parameters for the \`add()\` [isn't supported](https://caniuse.com/#feat=classlist) in IE 11.
 
 ~~~ javascript
 ele.classList.add('class-name');
 
-// Add multiple classes (Not supported in IE 11)
+// 添加多个 class (IE 11不支持)
 ele.classList.add('another', 'class', 'name');
 ~~~
 
-## Remove a class from an element
+## 从元素中删除一个 class
 
 Note that multiple parameters for the \`remove()\` [isn't supported](https://caniuse.com/#feat=classlist) in IE 11.
 
 ~~~ javascript
 ele.classList.remove('class-name');
 
-// Remove multiple classes (Not supported in IE 11)
+// 删除多个class (IE 11不支持)
 ele.classList.remove('another', 'class', 'name');
 ~~~
 
-## Toggle a class
+## 切换 class
 
 ~~~ javascript
 ele.classList.toggle('class-name');
