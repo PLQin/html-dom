@@ -18,7 +18,7 @@ const Filter: React.FC<{}> = () => {
     const posts = keyword
                 ? allPosts.filter((v) => v.toLowerCase().includes(keyword.toLowerCase()))
                 : [];
-
+                
     return (
         <div className='w-full relative'>
             <div className={`border-b border-gray-400`}>
