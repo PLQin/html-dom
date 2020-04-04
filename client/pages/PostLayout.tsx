@@ -19,7 +19,6 @@ const PostLayout: React.FC<PostLayoutProps> = ({ children, slug }) => {
             return item;
         }
     });
-    console.log(zhTitle);
     return (
         <Layout>
             <Helmet>

@@ -33,7 +33,6 @@ const HomePage = () => {
                 <ul>
                     {
                         PostList.map((post, index) => {
-                            // console.log(post.zh);
                             const idx = (index < 9) ? `0${index + 1}` : `${index + 1}`;
                             return (
                                 <li key={post.slug} className='mb-4'>
