@@ -1,6 +1,6 @@
 # htmldom.cn
 
-## Story
+## 故事
 
 Web development goes very fast. I still remember the moments when starting to use [jQuery](https://jquery.com), [Prototype](http://prototypejs.org),
 [script.aculo.us](https://script.aculo.us), [Zepto](https://zeptojs.com) and many more.
