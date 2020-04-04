@@ -44,11 +44,7 @@ $ npm install
 $ npm run dev-server
 ~~~
 
-<<<<<<< HEAD
 请在浏览器中打开 localhost:8080 查看实际的效果
-=======
-Open http://localhost:8080 in your browser to see it in action.
->>>>>>> 2c813865419652f5ccf86588cf9f5f207e1027bd
 
 ## 贡献
 
@@ -69,18 +65,9 @@ Open http://localhost:8080 in your browser to see it in action.
 
 | 产品                                           | 描述                                                       |
 |---------------------------------------------------|-------------------------------------------------------------------|
-<<<<<<< HEAD
 | [Blur Page](https://blur.page)                    | 浏览器扩展程序，用于隐藏网页上的敏感信息   |
 | [CSS Layout](https://csslayout.io)                | 使用 CSS 制作的流行布局和图案的集合        |
 | [Fake Numbers](https://fakenumbers.io)            | 能够生成指定模拟数值的 JavaScript 工具库                                   |
 | [Form Validation](https://formvalidation.io)      | 最佳体验的 JavaScript 验证库                        |
 | [HTML DOM](https://www.htmldom.cn)                | 如何使用原生 JavaScript 来管理 HTML DOM                    |
 | [React PDF Viewer](https://react-pdf-viewer.dev)  | 使用 React 框架制作的 PDF 查看器                          |
-=======
-| [Blur Page](https://blur.page)                    | A browser extension to hide sensitive information on a web page   |
-| [CSS Layout](https://csslayout.io)                | A collection of popular layouts and patterns made with CSS        |
-| [Fake Numbers](https://fakenumbers.io)            | Generate fake and valid numbers                                   |
-| [Form Validation](https://formvalidation.io)      | The best validation library for JavaScript                        |
-| [HTML DOM](https://htmldom.cn)                    | 使用原生JS操作DOM                                                  |
-| [React PDF Viewer](https://react-pdf-viewer.dev)  | A React component to view a PDF document                          |
->>>>>>> 2c813865419652f5ccf86588cf9f5f207e1027bd
