@@ -44,7 +44,7 @@ $ npm install
 $ npm run dev-server
 ~~~
 
-请在浏览器中打开 localhost:1234 查看实际的效果
+请在浏览器中打开 localhost:8080 查看实际的效果
 
 ## 贡献
 

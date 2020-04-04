@@ -232,7 +232,7 @@ const mouseUpHandler = function() {
 };
 ~~~
 
-As we have \`draggingRowIndex\` and \`endRowIndex\`, it's now easy to check if user drops to the top of bottom of table.
+As we have \`draggingRowIndex\` and \`endRowIndex\`, it's now easy to check if user drops to the top or bottom of table.
 And we can decide how to move the target row [before or after the dragging row](/insert-an-element-after-or-before-other-element):
 
 ~~~ javascript
@@ -259,6 +259,7 @@ Following is the final demo. Try to drag and drop the first cell of any row.
         'clone-an-element',
         'create-an-element',
         'drag-and-drop-element-in-a-list',
+        'drag-and-drop-table-column',
         'get-siblings-of-an-element',
         'insert-an-element-after-or-before-other-element',
         'loop-over-a-nodelist',
