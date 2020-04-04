@@ -30,7 +30,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({ children, slug }) => {
             <div className="mb-12 text-center">
                 <a
                     className="text-2xl bg-gray-400 px-4 py-2"
-                    href={`https://github.com/phuoc-ng/html-dom/blob/master/client/posts/${slug}/index.tsx`}
+                    href={`https://github.com/PLQin/html-dom/blob/master/client/posts/${slug}/index.tsx`}
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                     target="_blank"
@@ -49,7 +49,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({ children, slug }) => {
                         to={`/${slugify(PostList[index - 1].slug)}`}
                         title={unslugify(PostList[index - 1].slug)}
                     >
-                        â {unslugify(PostList[index - 1].slug)}
+                        ← {unslugify(PostList[index - 1].slug)}
                     </Link>
                 </div>
             )}
@@ -60,7 +60,7 @@ const PostLayout: React.FC<PostLayoutProps> = ({ children, slug }) => {
                         to={`/${slugify(PostList[index + 1].slug)}`}
                         title={unslugify(PostList[index + 1].slug)}
                     >
-                        {unslugify(PostList[index + 1].slug)} â
+                        {unslugify(PostList[index + 1].slug)} →
                     </Link>
                 </div>
             )}

@@ -29,7 +29,7 @@ A website introducing the APIs, well-known problems, most popular questions coul
 1. Clone the project:
 
 ~~~ console
-$ git clone https://github.com/phuoc-ng/html-dom
+$ git clone https://github.com/PLQin/html-dom
 ~~~
 
 2. Install the dependencies:
@@ -58,9 +58,9 @@ This project is developed by _Nguyen Huu Phuoc_. I love building products and sh
 Be my friend on
 * [Twitter](https://twitter.com/nghuuphuoc)
 * [dev.to](https://dev.to/phuocng)
-* [Github](https://github.com/phuoc-ng)
+* [Github](https://github.com/PLQin)
 
-## Products
+## 作品
 
 You might be interesting in my products:
 

@@ -20,7 +20,7 @@ const HomePage = () => {
             <div className="mb-12 text-center">
                 <a
                     className="text-2xl bg-gray-400 px-4 py-2"
-                    href="https://github.com/phuoc-ng/html-dom"
+                    href="https://github.com/PLQin/html-dom"
                     rel="noopener noreferrer"
                     style={{ textDecoration: 'none' }}
                     target="_blank"
@@ -38,6 +38,7 @@ const HomePage = () => {
                             <li key={post.slug} className='mb-4'>
                                 <Link
                                     to={`/${post.slug}`}
+                                    target='_blank'
                                     className='bg-gray-200 px-2 py-1 flex items-center justify-between'
                                 >
                                     <span className='mr-2'>{idx} — {unslugify(post.slug)}</span>

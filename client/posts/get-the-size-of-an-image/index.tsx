@@ -34,7 +34,7 @@ image.addEventListener('load', function(e) {
     const height = e.target.height;
 });
 
-// Set the source
+// 设置源
 image.src = '/path/to/image.png';
 ~~~
 

@@ -55,7 +55,7 @@ const resize = function(image, ratio) {
                     : resolve(dataUrlToBlob(canvas.toDataURL()));
             });
 
-            // Set the source
+            // 设置源
             ele.src = e.target.result;
         });
 

@@ -13,64 +13,62 @@ export default () => {
 </Helmet>
 <Markdown
     content={`
-In this example, we will force users to enter characters from given set only. Specifically, the supported characters
-in this demonstration include the digits and space. Of course, you can apply the idea for other characters as well.
+在这个例子里, 我们将强制用户只输入给定集合中的字符。具体地说, 这个演示中支持的字符在包括数字和空格。当然，您也可以将这个想法用在其他属性。
 
-Here is our input element:
+这是我们的 input 元素 :
 
 ~~~ html
 <input type="text" id="input" />
 ~~~
 
-## 1. Handle the events
+## 1. 绑定事件
 
-By handling the \`keypress\` event, we can prevent user from entering characters except digits and space:
+通过绑定 \`keypress\` 事件，我们可以防止用户输入数字和空格以外的字符
 
 ~~~ javascript
 const ele = document.getElementById('input');
 
 ele.addEventListener('keypress', function(e) {
-    // Get the code of pressed key
+    // 得到 keyCode
     const key = e.which || e.keyCode;
 
-    // 0, 1, ..., 9 have key code of 48, 49, ..., 57, respectively
-    // Space has key code of 32
+    // 0, 1, ..., 9, ..., 48, 49, ..., 57, 都对应着不同的按键
+    // 空格的keyCode是 32
     if (key != 32 && (key < 48 || key > 57)) {
-        // Prevent the default action
+        // 阻止默认操作
         e.preventDefault();
     }
 });
 ~~~
 
-It looks good but isn't enough since user is still able to paste or drag unsupported characters to the input.
-These cases can be handled by the \`input\` event:
+上面的代码看起来不错，但还不够，因为用户仍然可以将不支持的字符粘贴或拖动到 \`input\` 中。这些情况可以通过 \`input\` 事件来处理:
 
 ~~~ javascript
-// Track the current value
+// 保存当前值
 let currentValue = ele.value || '';
 
 ele.addEventListener('input', function(e) {
     const target = e.target;
 
-    // If users enter supported character (digits or space)
+    // 如果用户输入支持的字符(数字或空格)
     /^[0-9\\s]*$/.test(target.value)
-        // Backup the current value
+        // 备份当前值
         ? currentValue = target.value
-        // Otherwise, restore the value
-        // Note that in this case, \`e.preventDefault()\` doesn't help
+        // 否则，还原值
+        // 注意在这种情况下, \`e.preventDefault()\` 不起作用
         : target.value = currentValue;
 });
 ~~~
 
-Here we check if the value matches the regular expression \`/^[0-9\\s]*$/\` that covers the digit and space characters.
+在上面的代码中，我们检查值是否与正则表达式 \` /^[0-9\\s]*$/ \`匹配。
 
-It fixes the cases where users paste from the keyboard (\`Ctrl + V\`), context menu or drop text to the input.
+它修复了用户从键盘粘贴 (\`Ctrl + V\`)、右键粘贴或将文本拖拽放入的情况。
 
-But there's another issue. Calling \`target.value = currentValue\` will put the cursor at the end of input.
-We have to persist the cursor's position.
+但还有一个问题。调用 \`target.value = currentValue\` 将把光标放在输入的末尾。
+我们必须保持光标的位置。
 
 ~~~ javascript
-// Track the current cursor's position
+// 跟踪光标当前的位置
 const selection = {};
 
 ele.addEventListener('keydown', function(e) {
@@ -82,7 +80,7 @@ ele.addEventListener('keydown', function(e) {
 });
 ~~~
 
-When user changes the input value, we will restore both the value and selection positions if the value isn't supported:
+当用户更改 \`input\` 值时，如果不支持该值，我们将同时重置该值和光标位置:
 
 ~~~ javascript
 ele.addEventListener('input', function(e) {
@@ -91,8 +89,8 @@ ele.addEventListener('input', function(e) {
     if (/^[0-9\s]*$/.test(target.value)) {
         currentValue = target.value;
     } else {
-        // Users enter the not supported characters
-        // Restore the value and selection
+        // 用户输入不支持的字符
+        // 重置该值和光标位置
         target.value = currentValue;
         target.setSelectionRange(
             selection.selectionStart,
@@ -102,12 +100,12 @@ ele.addEventListener('input', function(e) {
 });
 ~~~
 
-We can combine the tracked properties (\`value\`, \`selectionStart\` and \`selectionEnd\`) to a single variable as you
-see in the demo at the end.
+我们可以将跟踪的属性( \`value\`, \`selectionStart\` 和 \`selectionEnd\` )合并到一个变量中
+请参阅最后的演示。
 
-## 2. Use the special input
+## 2. 使用特殊输入
 
-We can use a special HTML 5 input to serve particular use cases:
+我们可以使用特殊的HTML 5输入服务于特定的用例:
 
 | \`input\`                     | Description                       |
 |-------------------------------|-----------------------------------|
@@ -119,9 +117,9 @@ We can use a special HTML 5 input to serve particular use cases:
 | \`<input type="time" />\`     | Let user enter a time             |
 | \`<input type="url" />\`      | Let user enter a URL              |
 
-There are more built-in types that you can explore [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#%3Cinput%3E_types).
+您可以探索更多的内置类型 [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#%3Cinput%3E_types).
 
-In our specific example, \`<input type="number" />\` doesn't help because it doesn't allow to enter a space.
+在我们的具体例子中, \`<input type="number" />\` 没有作业，因为它不允许输入一个空格。
 `}
 />
 <Demo src='/demo/allow-to-enter-particular-characters-only' />

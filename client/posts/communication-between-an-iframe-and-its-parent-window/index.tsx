@@ -75,8 +75,8 @@ window.addEventListener('message', function(e) {
 > ~~~
 
 Here is an example demonstrates how to send a simple message between
-a [page](https://github.com/phuoc-ng/html-dom/blob/master/demo/communication-between-an-iframe-and-its-parent-window/index.html)
-and [a child iframe](https://github.com/phuoc-ng/html-dom/blob/master/demo/communication-between-an-iframe-and-its-parent-window/iframe.html):
+a [page](https://github.com/PLQin/html-dom/blob/master/demo/communication-between-an-iframe-and-its-parent-window/index.html)
+and [a child iframe](https://github.com/PLQin/html-dom/blob/master/demo/communication-between-an-iframe-and-its-parent-window/iframe.html):
 `}
 />
 <Demo src='/demo/communication-between-an-iframe-and-its-parent-window' />

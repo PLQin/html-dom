@@ -8,7 +8,7 @@ const Footer: React.FC<{}> = () => {
             <div className='ml-auto mr-auto max-w-3xl px-2 lg:px-0'>
                 <SubscribeForm />
                 <div>
-                    <h3 className='text-xl sm:text-2xl font-semibold mb-2'>Products</h3>
+                    <h3 className='text-xl sm:text-2xl font-semibold mb-2'>友情链接</h3>
                     <ul className='flex flex-wrap -ml-1 -mr-1'>
                         <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
                             <a
@@ -67,7 +67,7 @@ const Footer: React.FC<{}> = () => {
                                 title="HTML DOM - Common tasks of managing HTML DOM with native API"
                             >
                                 <div className='font-semibold'>HTML DOM</div>
-                                <span className='text-gray-600'>???JavaScript??HTML_DOM</span>
+                                <span className='text-gray-600'>common tasks of managing HTML DOM with native API</span>
                             </a>
                         </li>
                         <li className='w-1/2 sm:w-1/3 px-1 mb-6'>
@@ -112,20 +112,20 @@ const Footer: React.FC<{}> = () => {
                         </li>
                         <li className='flex-1'>
                             <a
-                                href="https://github.com/phuoc-ng"
+                                href="https://github.com/PLQin"
                                 rel="noopener noreferrer"
                                 style={{ textDecoration: 'none' }}
                                 target="_blank"
                             >
                                 <div className='font-semibold'>GitHub</div>
-                                <span className='text-gray-600'>@phuoc-ng</span>
+                                <span className='text-gray-600'>@PLQin</span>
                             </a>
                         </li>
                     </ul>
                 </div>
 
                 <div className='pt-4'>
-                    © 2020 Nguyen Huu Phuoc. All rights reserved
+                    © 2020 htmldom.cn. All rights reserved
                 </div>
             </div>
         </div>
