@@ -23,7 +23,7 @@ const RelatedPosts: React.FC<RelatedPostsProps> = ({ slugs }) => {
                             target='_blank'
                             className='bg-gray-200 px-2 py-1 flex items-center justify-between'
                         >
-                            <span>{unslugify(post.slug)}</span>
+                            <span>{post.zh || unslugify(post.slug)}</span>
                             <span
                                 className={`
                                     p-1 text-white rounded
@@ -32,7 +32,7 @@ const RelatedPosts: React.FC<RelatedPostsProps> = ({ slugs }) => {
                                     ${post.level === 'Advanced' ? 'bg-red-600' : ''}
                                 `}
                             >
-                                {post.level.toLowerCase()}
+                                {post.zhLevel || post.level.toLowerCase()}
                             </span>
                         </Link>
                     </li>
