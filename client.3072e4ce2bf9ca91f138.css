@@ -1,0 +1,4 @@
+.hljs,code{font-family:Source Code Pro,monospace}
+.spinner{animation-duration:.75s;animation-name:spinner-transform;animation-iteration-count:infinite;animation-timing-function:linear;transition-property:transform}@keyframes spinner-transform{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}
+
+/*# sourceMappingURL=client.3072e4ce2bf9ca91f138.css.map*/

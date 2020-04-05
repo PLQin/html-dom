@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[52],{OyqN:function(n,t,a){"use strict";a.r(t);var e=a("q1tI"),o=a.n(e),r=a("Ov9x");t.default=function(){return o.a.createElement(r.a,{content:"\n~~~ javascript\nhistory.back();\n\n// Or\nhistory.go(-1);\n~~~\n"})}}}]);
+//# sourceMappingURL=posts-go-back-to-the-previous-page.beaa036521b32fafa8c3.js.map
