@@ -14,7 +14,7 @@ export default () => {
                 content={`
 ## 使用 on 属性 (不推荐使用)
 
-你可以通过 \`on{eventName}\` 属性设置事件处理器，其中 \`eventName\` 表示[事件类型](https://developer.mozilla.org/zh-CN/docs/Web/Events, "事件类型")。例如: 
+你可以通过 \`on{eventName}\` 属性设置事件处理器，其中 \`eventName\` 表示[事件类型](https://developer.mozilla.org/zh-CN/docs/Web/Events)。例如: 
 
 ~~~ javascript
 ele.onclick = function() {
