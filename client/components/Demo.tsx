@@ -9,6 +9,7 @@ interface DemoProps {
 const Demo: React.FC<DemoProps> = ({ src }) => {
     const [loaded, setLoaded] = React.useState(false);
     const iframeRef = React.useRef<HTMLIFrameElement | null>(null);
+    src = src.includes('.html') ? src  : `${src}/index.html`;
 
     const onLoad = (e: React.SyntheticEvent) => {
         setLoaded(true);
@@ -26,7 +27,7 @@ const Demo: React.FC<DemoProps> = ({ src }) => {
                 <div className='mr-2'>Demo</div>
                 (<a
                     className='underline'
-                    href={`https://github.com/PLQin/html-dom/blob/master/${src}/index.html`}
+                    href={`https://github.com/PLQin/html-dom/blob/master/${src}`}
                     target='_blank'
                 >
                     源码
