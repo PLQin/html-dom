@@ -18,9 +18,9 @@ export default () => {
 const scrollbarWidth = document.body.offsetWidth - document.body.clientWidth;
 ~~~
 
-## 2. 使用假元素
+## 2. 使用虚拟元素
 
-我们创建两个假 \`div\` 元素，其中一个是另一个的子元素。然后计算他们的宽度差。
+我们创建两个虚拟 \`div\` 元素，其中一个是另一个的子元素。然后计算他们的宽度差。
 
 ~~~ javascript
 const calculateScrollbarWidth = function() {
