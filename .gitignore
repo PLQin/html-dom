@@ -1,0 +1,6 @@
+.htaccess
+.user.ini
+.netlify
+dist
+node_modules
+.history
