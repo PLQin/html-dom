@@ -1,5 +1,5 @@
 # HTML DOM
-[英文版](htmldom.dev)  [中文版](www.htmldom.cn)
+[英文版](//github.com/phuoc-ng/html-dom)  [中文版](www.htmldom.cn)
 
 ## 故事
 
