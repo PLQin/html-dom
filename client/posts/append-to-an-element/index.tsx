@@ -8,7 +8,7 @@ export default () => {
 <>
 <Markdown
     content={`
-Append the \`ele\` element to the end of the \`target\` element:
+将 \`ele\` 元素添加到 \`target\` 元素的末尾: 
 
 ~~~ javascript
 target.appendChild(ele);
