@@ -107,15 +107,15 @@ ele.addEventListener('input', function(e) {
 
 我们可以使用特殊的HTML 5输入服务于特定的用例:
 
-| \`input\`                     | Description                       |
+| \`input\`                     | 描述                       |
 |-------------------------------|-----------------------------------|
-| \`<input type="color" />\`    | Let user specify a color          |
-| \`<input type="date" />\`     | Let user enter a date             |
-| \`<input type="email" />\`    | Let user enter an email address   |
-| \`<input type="number" />\`   | Let user enter numbers only       |
-| \`<input type="tel" />\`      | Let user enter a telephone number |
-| \`<input type="time" />\`     | Let user enter a time             |
-| \`<input type="url" />\`      | Let user enter a URL              |
+| \`<input type="color" />\`    | 让用户指定一个颜色          |
+| \`<input type="date" />\`     | 让用户选择一个日期             |
+| \`<input type="email" />\`    | 让用户输入邮箱地址   |
+| \`<input type="number" />\`   | 让用户输入数值       |
+| \`<input type="tel" />\`      | 让用户输入号码 |
+| \`<input type="time" />\`     | 让用户输入时间             |
+| \`<input type="url" />\`      | 让用户输入 URL 地址              |
 
 您可以探索更多的内置类型 [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#%3Cinput%3E_types).
 
