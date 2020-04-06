@@ -13,7 +13,7 @@ const PostList: Post[] = [
     { slug: 'calculate-the-mouse-position-relative-to-an-element', zh: '计算鼠标指正相对于元素的位置', level: 'Basic', zhLevel: '基础' },
     { slug: 'calculate-the-size-of-scrollbar', zh: '计算滚动条尺寸', level: 'Intermediate', zhLevel: '中级' },
     { slug: 'change-the-website-favicon', zh: '改变网站的 favicon 图标', level: 'Intermediate', zhLevel: '中级' },
-    { slug: 'check-an-element-against-a-selector', zh: '根据选择器检查元素是否存在', level: 'Basic', zhLevel: '基础' },
+    { slug: 'check-an-element-against-a-selector', zh: '根据选择器检查在元素中是否存在', level: 'Basic', zhLevel: '基础' },
     { slug: 'check-if-an-element-has-given-class', zh: '检查元素是否有指定的 class 属性值', level: 'Basic', zhLevel: '基础' },
     { slug: 'check-if-an-element-is-a-descendant-of-another', zh: '检查一个元素是否是另一个元素的子元素(后代)', level: 'Basic', zhLevel: '基础' },
     { slug: 'check-if-an-element-is-in-the-viewport', zh: '检查元素是否在可是界面中', level: 'Basic', zhLevel: '基础' },
