@@ -20,43 +20,42 @@ export default () => {
 </Helmet>
 <Markdown
     content={`
-In this post, we'll create a slider for comparing two imges visually. The slider has three elements organized as below:
+在这篇文章中，我们将创建一个滑块来比较两个 imges。滑块有三个元素组织如下:
 
 ~~~ html
 <div class="container">
-    <!-- Show the modified image -->
+    <!-- 显示修改后的图像 -->
     <div class="modified-image"></div>
 
-    <!-- The resizer -->
+    <!-- 调整 -->
     <div class="resizer" id="dragMe"></div>
 
-    <!-- The original image -->
+    <!-- 原始图像 -->
     <img src="/path/to/original/image.png" />
 </div>
 ~~~
 
 ## The markup
 
-Initially, the modified image will take half width of the container. It's positioned absolutely to the container:
+最初，修改后的图像将占据容器的一半宽度。它绝对位于容器上：
 
 ~~~ css
 .container {
     position: relative;
 }
 .modified-image {
-    /* Absolute position */
+    /* 绝对定位 */
     left: 0;
     position: absolute;
     top: 0;
 
-    /* Take full height and half width of container */
+    /* 取容器的全高和半宽 */
     height: 100%;
     width: 50%;
 }
 ~~~
 
-We don't use the \`img\` tag to display the modified image here because the image could be scaled. Instead, we use the modified
-image as the background of modified element:
+我们不使用 \`img\` 标签在此处显示修改后的图像，因为图像可以缩放。相反，我们将修改后的图像用作修改后的元素的背景：
 
 ~~~ html
 <div
@@ -66,7 +65,7 @@ image as the background of modified element:
 </div>
 ~~~
 
-The modified element uses more styles for showing the background image at desired position:
+修改后的元素使用更多样式在所需位置显示背景图像：
 
 ~~~ css
 .modified-image {
@@ -77,62 +76,60 @@ The modified element uses more styles for showing the background image at desire
 }
 ~~~
 
-It's a lot easier to set the position for the resizer. It is displayed at the center of container:
+设置大小调整器的位置要容易得多。它显示在容器的中央：
 
 ~~~ css
 .resizer {
-    /* Absolute position */
+    /* 绝对定位 */
     left: 50%;
     position: absolute;
     top: 0;
 
-    /* Size */
+    /* 大小 */
     height: 100%;
     width: 2px;
 
-    /* Background */
+    /* 背景 */
     background-color: #cbd5e0;
 
-    /* Indicate that it can be resized */
+    /* 表示它可以调整大小 */
     cursor: ew-resize;
 }
 ~~~
 
-## Handle the events
+## 事件处理
 
-When user moves the resizer, we calculate how far the mouse has been moved. Then set the position for the modified and resizer elements
-based on the current mouse position.
+当用户移动大小调整器时，我们计算鼠标已移动了多远。然后根据当前鼠标位置设置修改元素和调整大小元素的位置。
 
-For more information about the idea, you can look at the [create resizable split views](/create-resizable-split-views) post.
-Here is the piece of code:
+关于这个想法的更多信息，你可以查看[创建可调整大小的拆分视图](/create-resizable-split-views)文章。这是一段代码:
 
 ~~~ javascript
-// Query the element
+// 查询元素
 const resizer = document.getElementById('dragMe');
 const leftSide = resizer.previousElementSibling;
 
-// The current position of mouse
+// 鼠标当前位置
 let x = 0;
 let y = 0;
 
-// The width of modified element
+// 修改元素宽度
 let leftWidth = 0;
 
-// Handle the mousedown event
-// that's triggered when user drags the resizer
+// 绑定 mousedown 事件
+// 当用户拖动调整大小时触发
 const mouseDownHandler = function(e) {
-    // Get the current mouse position
+    // 获取当前鼠标位置
     x = e.clientX;
     y = e.clientY;
     leftWidth = leftSide.getBoundingClientRect().width;
 
-    // Attach the listeners to \`document\`
+    // 将侦听器绑定到 \`document\` 上
     document.addEventListener('mousemove', mouseMoveHandler);
     document.addEventListener('mouseup', mouseUpHandler);
 };
 
 const mouseMoveHandler = function(e) {
-    // How far the mouse has been moved
+    // 鼠标移动了多远
     const dx = e.clientX - x;
     const dy = e.clientY - y;
 
@@ -140,17 +137,16 @@ const mouseMoveHandler = function(e) {
     newLeftWidth = Math.max(newLeftWidth, 0);
     newLeftWidth = Math.min(newLeftWidth, 100);
 
-    // Set the width for modified and resizer elements
+    // 设置修改和调整大小元素的宽度
     leftSide.style.width = \`\${newLeftWidth}%\`;
     resizer.style.left = \`\${newLeftWidth}%\`;
 };
 
-// Attach the handler
+// 将事件处理
 resizer.addEventListener('mousedown', mouseDownHandler);
 ~~~
 
-When user moves the mouse around, we have to make sure that the mouse isn't moved to out of the container.
-That's why we have to compare the \`newLeftWidth\` with 0 and 100 percentages:
+当用户移动鼠标时，我们必须确保鼠标没有移动到容器外。这就是为什么我们必须将newLeftWidth与0和100个百分比进行比较:
 
 ~~~ javascript
 const mouseMoveHandler = function(e) {
@@ -161,7 +157,7 @@ const mouseMoveHandler = function(e) {
 };
 ~~~
 
-Below is the demo that you can play with.
+下面是你可以使用的演示。
 
 _Photo by [frank mckenna](https://unsplash.com/@frankiefoto) on [Unsplash](https://unsplash.com/photos/OD9EOzfSOh0)_
 `}
