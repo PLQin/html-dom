@@ -52,6 +52,8 @@ ele.removeEventListener('click', handler);
                     'calculate-the-mouse-position-relative-to-an-element',
                     'communication-between-an-iframe-and-its-parent-window',
                     'count-the-number-of-characters-of-a-textarea',
+                    'create-a-range-slider',
+                    'create-an-image-comparison-slider',
                     'create-resizable-split-views',
                     'detect-if-the-caps-lock-is-on',
                     'distinguish-between-left-and-right-mouse-clicks',
@@ -68,6 +70,7 @@ ele.removeEventListener('click', handler);
                     'placeholder-for-a-contenteditable-element',
                     'press-shift-and-enter-for-a-new-line',
                     'prevent-the-default-action-of-an-event',
+                    'print-an-image',
                     'review-an-image-before-uploading-it',
                     'replace-broken-images',
                     'resize-an-iframe-to-fit-its-content',
@@ -76,6 +79,7 @@ ele.removeEventListener('click', handler);
                     'resize-the-width-of-a-text-box-to-fit-its-content-automatically',
                     'select-the-text-of-a-textarea-automatically',
                     'show-a-ghost-element-when-dragging-an-element',
+                    'show-a-loading-indicator-when-an-iframe-is-being-loaded',
                     'sort-a-table-by-clicking-its-headers',
                 ]}
             />
