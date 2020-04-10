@@ -266,6 +266,8 @@ Enjoy the demo!
 <RelatedPosts
     slugs={[
         'attach-or-detach-an-event-handler',
+        'create-a-range-slider',
+        'create-an-image-comparison-slider',
         'get-set-and-remove-data-attributes',
         'get-siblings-of-an-element',
         'loop-over-a-nodelist',
