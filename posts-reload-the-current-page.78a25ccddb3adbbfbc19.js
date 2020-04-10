@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[74],{wr1Q:function(n,e,a){"use strict";a.r(e);var t=a("q1tI"),o=a.n(t),r=a("Ov9x"),c=a("2G++");e.default=function(){return o.a.createElement(o.a.Fragment,null,o.a.createElement(r.a,{content:"\n## Reload and keep the POST data\n\n~~~ javascript\nlocation.reload();\n~~~\n\n## Reload and ignore the POST data\n\n~~~ javascript\nlocation.href = location.href;\n~~~\n"}),o.a.createElement(c.a,{slugs:["redirect-to-another-page"]}))}}}]);
+//# sourceMappingURL=posts-reload-the-current-page.78a25ccddb3adbbfbc19.js.map

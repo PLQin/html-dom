@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[37],{lTMj:function(t,n,e){"use strict";e.r(n);var c=e("q1tI"),o=e.n(c),i=e("Ov9x");n.default=function(){return o.a.createElement(i.a,{content:"\n## Get the document title\n\n~~~ javascript\nconst title = document.title;\n~~~\n\n## Set the document title\n\n~~~ javascript\ndocument.title = 'Hello World';\n~~~\n"})}}}]);
-//# sourceMappingURL=posts-get-or-set-the-document-title.8b7575cf72a4e886072b.js.map

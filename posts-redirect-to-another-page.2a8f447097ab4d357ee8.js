@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[73],{nBN0:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),r=t.n(a),c=t("Ov9x"),l=t("2G++");n.default=function(){return r.a.createElement(r.a.Fragment,null,r.a.createElement(c.a,{content:"\n~~~ javascript\nlocation.href = '/the/new/url';\n~~~\n"}),r.a.createElement(l.a,{slugs:["reload-the-current-page"]}))}}}]);
+//# sourceMappingURL=posts-redirect-to-another-page.2a8f447097ab4d357ee8.js.map

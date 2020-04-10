@@ -16,7 +16,9 @@
     <url><loc>https://www.htmldom.cn/communication-between-an-iframe-and-its-parent-window</loc></url>
     <url><loc>https://www.htmldom.cn/copy-text-to-the-clipboard</loc></url>
     <url><loc>https://www.htmldom.cn/count-the-number-of-characters-of-a-textarea</loc></url>
+    <url><loc>https://www.htmldom.cn/create-a-range-slider</loc></url>
     <url><loc>https://www.htmldom.cn/create-an-element</loc></url>
+    <url><loc>https://www.htmldom.cn/create-an-image-comparison-slider</loc></url>
     <url><loc>https://www.htmldom.cn/create-one-time-event-handler</loc></url>
     <url><loc>https://www.htmldom.cn/create-resizable-split-views</loc></url>
     <url><loc>https://www.htmldom.cn/detect-clicks-outside-of-an-element</loc></url>
@@ -64,6 +66,7 @@
     <url><loc>https://www.htmldom.cn/press-shift-and-enter-for-a-new-line</loc></url>
     <url><loc>https://www.htmldom.cn/prevent-the-default-action-of-an-event</loc></url>
     <url><loc>https://www.htmldom.cn/preview-an-image-before-uploading-it</loc></url>
+    <url><loc>https://www.htmldom.cn/print-an-image</loc></url>
     <url><loc>https://www.htmldom.cn/put-cursor-at-the-end-of-an-input</loc></url>
     <url><loc>https://www.htmldom.cn/redirect-to-another-page</loc></url>
     <url><loc>https://www.htmldom.cn/reload-the-current-page</loc></url>
@@ -76,6 +79,7 @@
     <url><loc>https://www.htmldom.cn/resize-columns-of-a-table</loc></url>
     <url><loc>https://www.htmldom.cn/resize-the-width-of-a-text-box-to-fit-its-content-automatically</loc></url>
     <url><loc>https://www.htmldom.cn/scale-a-text-to-fit-inside-of-an-element</loc></url>
+    <url><loc>https://www.htmldom.cn/scroll-to-an-element</loc></url>
     <url><loc>https://www.htmldom.cn/scroll-to-top-of-the-page</loc></url>
     <url><loc>https://www.htmldom.cn/select-an-element-or-list-of-elements</loc></url>
     <url><loc>https://www.htmldom.cn/select-the-children-of-an-element</loc></url>
@@ -83,6 +87,7 @@
     <url><loc>https://www.htmldom.cn/serialize-form-data-into-a-query-string</loc></url>
     <url><loc>https://www.htmldom.cn/set-css-style-for-an-element</loc></url>
     <url><loc>https://www.htmldom.cn/show-a-ghost-element-when-dragging-an-element</loc></url>
+    <url><loc>https://www.htmldom.cn/show-a-loading-indicator-when-an-iframe-is-being-loaded</loc></url>
     <url><loc>https://www.htmldom.cn/show-or-hide-an-element</loc></url>
     <url><loc>https://www.htmldom.cn/sort-a-table-by-clicking-its-headers</loc></url>
     <url><loc>https://www.htmldom.cn/strip-html-from-a-given-text</loc></url>

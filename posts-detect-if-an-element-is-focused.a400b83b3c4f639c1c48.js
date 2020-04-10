@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[27],{"H3X+":function(e,t,n){"use strict";n.r(t);var c=n("q1tI"),a=n.n(c),s=n("Ov9x");t.default=function(){return a.a.createElement(s.a,{content:"\nAssume that `ele` represents the element that you want to check if it has the focus currently:\n\n~~~ javascript\nconst hasFocus = ele === document.activeElement;\n~~~\n"})}}}]);
+//# sourceMappingURL=posts-detect-if-an-element-is-focused.a400b83b3c4f639c1c48.js.map
