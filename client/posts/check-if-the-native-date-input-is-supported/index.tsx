@@ -8,7 +8,7 @@ export default () => {
 <>
 <Markdown
     content={`
-The following function returns \`true\` if the current browser supports the native date input \`<input type="date" />\`:
+如果当前浏览器支持使用 \`<input type="date" />\` 输入日期，则以下函数返回 \`true\`。
 
 ~~~ javascript
 const isDateInputSupported = function() {
