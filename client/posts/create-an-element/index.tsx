@@ -8,13 +8,13 @@ export default () => {
 <>
 <Markdown
     content={`
-## Create new element
+## 创建新元素
 
 ~~~ javascript
 const ele = document.createElement('div');
 ~~~
 
-## Create new text node
+## 创建一个新的文本节点
 
 ~~~ javascript
 const ele = document.createTextNode('Hello World!');
