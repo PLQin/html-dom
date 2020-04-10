@@ -8,17 +8,17 @@ export default () => {
 <>
 <Markdown
     content={`
-The following function returns \`true\` if the \`ele\` element is scrollable.
+如果 \`ele\` 可滚动，则以下函数返回 \`true\`。
 
 ~~~ javascript
 const isScrollable = function(ele) {
-    // Compare the height to see if the element has scrollable content
+    // 比较 ele 元素高度，查看元素是否具有可滚动元素
     const hasScrollableContent = ele.scrollHeight > ele.clientHeight;
 
-    // It's not enough because the element's \`overflow-y\` style can be set as
+    // 这还不够的，因为可以将 ele 元素的 “overflow-y” 样式设置为
     // * \`hidden\`
     // * \`hidden !important\`
-    // In those cases, the scrollbar isn't shown
+    // 在这种情况下，不会显示滚动条
     const overflowYStyle = window.getComputedStyle(ele).overflowY;
     const isOverflowHidden = overflowYStyle.indexOf('hidden') !== -1;
 
