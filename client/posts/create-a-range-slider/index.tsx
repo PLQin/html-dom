@@ -7,54 +7,52 @@ import RelatedPosts from '../../components/RelatedPosts';
 
 export default () => {
     return (
-<>
-<Helmet>
-    <meta
-        name='keywords'
-        content={`
+        <>
+            <Helmet>
+                <meta
+                    name='keywords'
+                    content={`
             addEventListener, getBoundingClientRect, mousedown event, mousemove event, mouseup event, 
             previous sibling, previousElementSibling, next sibling, nextElementSibling, range input,
             range slider, set css style, set element width
         `}
-    />
-</Helmet>
-<Markdown
-    content={`
-This post introduces two popular ways to create a range slider.
+                />
+            </Helmet>
+            <Markdown
+                content={`
+这篇文章介绍了两种创建范围滑块的流行方法。
 
-## 1. Use a \`range\` input
+## 1. 使用 \`range\` 类型的 input
 
-HTML provides a built-in \`range\` input:
+HTML提供了内置的 \`range\` input类型: 
 
 ~~~ html
 <input type="range" />
 ~~~
 
-It's supported in mordern browsers, IE 10 and later. But there're some limitations such as:
-* You can't customize the knob
-* At the time of writing this, the vertical-oriented slider [isn't supported](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#Browser_compatibility) 
-in all mordern browsers
+在现代浏览器，IE 10和更高版本中受支持。但是有一些限制，例如：
+* 你不能定制按钮
+* 在撰写本文时，并非所有现代浏览器都[支持](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range#Browser_compatibility)垂直滑块
 
-Jump to the next section if you want to have a customizable slider.
+如果需要可自定义的滑块，请跳至下一部分。
 
-> ## Tip
+> ## 提示
 > 
-> Using the similar technique mentioned in this [post](/check-if-the-native-date-input-is-supported), we can check if the \`range\` input
-> is supported or not:
+> 使用[本文](/check-if-the-native-date-input-is-supported)中提到的类似技术，我们可以检查范围输入是否受支持:
 >
 > ~~~ javascript
 > const isRangeInputSupported = function() {
 >     const ele = document.createElement('input');
 >     ele.setAttribute('type', 'range');
->     // If the browser doesn't support the \`range\` input,
->     // the \`type\` attribute will be reverted back to \`text\`
+>     // 如果浏览器不支持 \`range\` input 类型
+>     // \`type\` 属性将恢复为 \`text\`
 >     return ele.type !== 'text';
 > };
 > ~~~
 
-## 2. Create a customizable range slider
+## 2. 创建一个可自定义的范围滑块
 
-A slider is a combination of three parts: a knob, and two sides located at the left and right of the knob.
+滑块是三个部分的组合：一个旋钮，以及位于旋钮左右两侧的两个侧面。
 
 ~~~ html
 <div class="container">
@@ -64,67 +62,65 @@ A slider is a combination of three parts: a knob, and two sides located at the l
 </div>
 ~~~
 
-These parts are placed in the same row. The right element takes the available width. So, we can use the following styles
-to build the layout:
+这些部分放在同一行中。右元素获取可用宽度。因此，我们可以使用以下样式来构建布局:
 
 ~~~ css
 .container {
-    /* Content is centered horizontally */
+    /* 内容是水平居中的 */
     align-items: center;
     display: flex;
 
-    /* Size */
+    /* 大小 */
     height: 1.5rem;
 }
 .right {
-    /* Take the remaining width */
+    /* 获取剩余宽度 */
     flex: 1;
     height: 2px;
 }
 ~~~
 
-You can take a look at the demo to see the full styles of elements.
+你可以查看演示以查看元素的完整样式。
 
-> ## Resource
+> ## 资源
 >
-> This [page](https://csslayout.io/patterns/slider) demonstrates the simplest layout for a range slider
+> 这个[页面](https://csslayout.io/patterns/slider)演示了范围滑块的最简单布局
 
-### Handle the events
+### 触发事件
 
-The idea of making the knob [draggable](/make-a-draggable-element) is quite simple:
+让旋钮可[拖动](/make-a-draggable-element)的想法很简单:
 
-* Handle the knob's \`mousedown\` event. The handler stores the mouse position:
+* 处理旋钮的 \`mousedown\` 事件。处理事件能够存储鼠标位置：
 
 ~~~ javascript
-// Query the element
+// 查询元素
 const knob = document.getElementById('knob');
 const leftSide = knob.previousElementSibling;
 
-// The current position of mouse
+// 鼠标的当前位置
 let x = 0;
 let y = 0;
 let leftWidth = 0;
 
-// Handle the mousedown event
-// that's triggered when user drags the knob
+// 处理 mousedown 事件
+// 当用户拖动按钮时就会触发
 const mouseDownHandler = function(e) {
-    // Get the current mouse position
+    // 获取当前鼠标位置
     x = e.clientX;
     y = e.clientY;
     leftWidth = leftSide.getBoundingClientRect().width;
 
-    // Attach the listeners to \`document\`
+    //将监听器附加到 \`document\` 上
     document.addEventListener('mousemove', mouseMoveHandler);
     document.addEventListener('mouseup', mouseUpHandler);
 };
 ~~~
 
-* When the knob is moving, based on the current and original mouse position, we know how far the mouse has been moved.
-We then set the width for the left side:
+* 当旋钮移动时，根据当前和原始鼠标位置，我们知道鼠标移动了多远。然后为左侧设置宽度: 
 
 ~~~ javascript
 const mouseMoveHandler = function(e) {
-    // How far the mouse has been moved
+    // 鼠标移动了多远
     const dx = e.clientX - x;
     const dy = e.clientY - y;
 
@@ -137,34 +133,33 @@ const mouseMoveHandler = function(e) {
 };
 ~~~
 
-There're more small things that aren't listed in this post since you can see them in the demo's source.
-But I always recommend to cleanup everything when the handlers aren't used:
+这篇文章中没有列出更多的小细节，但你可以在演示的源代码中看到它们。我总是建议在不使用事件监听时清理所有绑定的事件监听：
 
 ~~~ javascript
-// Triggered when user drops the knob
+// 当用户放下旋钮时触发
 const mouseUpHandler = function() {
     ...
 
-    // Remove the handlers of \`mousemove\` and \`mouseup\`
+    // 移除事件 \`mousemove\` 和 \`mouseup\`
     document.removeEventListener('mousemove', mouseMoveHandler);
     document.removeEventListener('mouseup', mouseUpHandler);
 };
 ~~~
 
-Enjoy the demo!
+享受演示!
 `}
-/>
-<Demo src='/demo/create-a-range-slider/index.html' />
-<RelatedPosts
-    slugs={[
-        'attach-or-detach-an-event-handler',
-        'create-an-image-comparison-slider',
-        'create-resizable-split-views',
-        'get-siblings-of-an-element',
-        'make-a-draggable-element',
-        'set-css-style-for-an-element',
-    ]}
-/>
-</>
+            />
+            <Demo src='/demo/create-a-range-slider/index.html' />
+            <RelatedPosts
+                slugs={[
+                    'attach-or-detach-an-event-handler',
+                    'create-an-image-comparison-slider',
+                    'create-resizable-split-views',
+                    'get-siblings-of-an-element',
+                    'make-a-draggable-element',
+                    'set-css-style-for-an-element',
+                ]}
+            />
+        </>
     );
 };
