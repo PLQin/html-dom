@@ -9,17 +9,17 @@ export default () => {
 <>
 <Markdown
     content={`
-## Send data from an iframe to its parent window
+## 将数据从 iframe 发送到父级 window中
 
 ~~~ javascript
-// Called from the iframe
+// 在 iframe 中调用
 window.parent.postMessage(message, '*');
 ~~~
 
-Where \`message\` is a string. If you want to send multiple data, you can encode in JSON:
+\`message\` 是一个字符串，如果你需要发送多个数据，可以在 JSON 中进行编码: 
 
 ~~~ javascript
-// Called from the iframe
+// 在 iframe 中调用
 const message = JSON.stringify({
     message: 'Hello from iframe',
     date: Date.now(),
@@ -27,36 +27,36 @@ const message = JSON.stringify({
 window.parent.postMessage(message, '*');
 ~~~
 
-## Send data from a page to its child iframe
+## 将数据从页面发送到它的子级 iframe 中
 
 ~~~ javascript
-// Called from the page
+// 在页面中调用
 frameEle.contentWindow.postMessage(message, '*');
 ~~~
 
-Where \`frameEle\` represents the iframe element.
+其中 \`frameEle\` 表示的是 iframe 元素。
 
-## Receive the sent data
+## 接收发送的数据
 
-In the iframe or main page, you can listen on the \`message\` event to receive the sent data:
+在 iframe 或主页面中，你可以监听 \`message\` 事件，接收发送的数据: 
 
 ~~~ javascript
 window.addEventListener('message', function(e) {
-    // Get the sent data
+    // 获取发送的数据
     const data = e.data;
     
-    // If you encode the message in JSON before sending them, 
-    // then decode here
+    // 如果你在发送数据之前使用 JSON 进行编码，
+    // 在这里进行解码
     // const decoded = JSON.parse(data);
 });
 ~~~
 
-> ## Tip
+> ## 提示
 >
-> If you send or receive message from different iframes, you can include a parameter to indicate where the message comes from.
+> 如果您从不同的 iframe 发送或接收消息，可以包含一个参数来指示消息的来源。
 >
 > ~~~ javascript
-> // From a child iframe
+> // 来自子级 iframe
 > const message = JSON.stringify({
 >   channel: 'FROM_FRAME_A',
 >   ...
@@ -64,19 +64,17 @@ window.addEventListener('message', function(e) {
 > window.parent.postMessage(message, '*');
 > ~~~
 >
-> Then in the main page, you can distinguish the messages by looking at the parameter:
+> 然后，在主页中，可以通过查看参数来区分消息
 >
 > ~~~ javascript
 > window.addEventListener('message', function(e) {
 >   const data = JSON.parse(e.data);
->   // Where does the message come from
+>   // 查看消息从哪里来
 >   const channel = data.channel;
 > });
 > ~~~
 
-Here is an example demonstrates how to send a simple message between
-a [page](https://github.com/PLQin/html-dom/blob/master/demo/communication-between-an-iframe-and-its-parent-window/index.html)
-and [a child iframe](https://github.com/PLQin/html-dom/blob/master/demo/communication-between-an-iframe-and-its-parent-window/iframe.html):
+以下示例演示了如何在[页面](https://github.com/PLQin/html-dom/blob/master/demo/communication-between-an-iframe-and-its-parent-window/index.html)和[子级 iframe](https://github.com/PLQin/html-dom/blob/master/demo/communication-between-an-iframe-and-its-parent-window/iframe.html)之间发送简单消息：
 `}
 />
 <Demo src='/demo/communication-between-an-iframe-and-its-parent-window' />
