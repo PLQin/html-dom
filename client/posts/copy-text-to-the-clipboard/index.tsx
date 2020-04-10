@@ -8,42 +8,42 @@ export default () => {
 <>
 <Markdown
     content={`
-Assume that we want to copy a given text, \`text\`, to the clipboard.
+假设我们要将给定的\`文本\`, 复制到剪贴板上。
 
-In order to do that, we [create](/create-an-element) a fake \`textarea\` element with value as \`text\`. Next, we [select](/trigger-an-event) the content and execute the "Copy" command. 
+为了做到这一点，我们[创建](/create-an-element)了一个具有\`文本\`值的虚拟 \`textarea\` 元素。接下来，我们选择内容并执行 "copy" 命令。
 
 ~~~ javascript
-// Create a fake textarea
+// 创建一个虚拟 textarea 元素
 const textAreaEle = document.createElement('textarea');
 
-// Reset styles
+// 初始化样式
 textAreaEle.style.border = '0';
 textAreaEle.style.padding = '0';
 textAreaEle.style.margin = '0';
 
-// Set the absolute position
-// User won't see the element
+// 设置为绝对定位
+// 用户不会看到这个元素
 textAreaEle.style.position = 'absolute';
 textAreaEle.style.left = '-9999px';
 textAreaEle.style.top = \`${document.documentElement.scrollTop}px\`;
 
-// Set the value
+// 设置值
 textAreaEle.value = text;
 
-// Append the textarea to body
+// 将 textarea 元素添加到 body 元素中
 document.body.appendChild(textAreaEle);
 
-// Focus and select the text
+// 聚焦并选择文本
 textAreaEle.focus();
 textAreaEle.select();
 
-// Execute the "copy" command
+// 执行 "copy" 命令
 try {
     document.execCommand('copy');
 } catch (err) {
-    // Unable to copy
+    // 无法复制
 } finally {
-    // Remove the textarea
+    // 移除 textarea 元素
     document.body.removeChild(textAreaEle);
 }
 ~~~
