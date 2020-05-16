@@ -157,7 +157,11 @@ const mouseMoveHandler = function(e) {
 };
 ~~~
 
-下面是你可以使用的演示。
+/>## 技巧
+>
+> 你可以参考技巧文章 [将事件处理程序附加到其他处理程序中](/attach-event-handlers-inside-other-handlers) tip.
+
+下面是您可以使用的演示程序。
 
 _Photo by [frank mckenna](https://unsplash.com/@frankiefoto) on [Unsplash](https://unsplash.com/photos/OD9EOzfSOh0)_
 `}
@@ -168,9 +172,11 @@ _Photo by [frank mckenna](https://unsplash.com/@frankiefoto) on [Unsplash](https
         'attach-or-detach-an-event-handler',
         'create-a-range-slider',
         'create-resizable-split-views',
+        'drag-to-scroll',
         'get-siblings-of-an-element',
         'make-a-draggable-element',
         'set-css-style-for-an-element',
+        'zoom-an-image',
     ]}
 />
 </>

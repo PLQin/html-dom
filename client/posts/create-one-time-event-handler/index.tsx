@@ -36,11 +36,17 @@ const handler = function(e) {
 
 ele.addEventListener('event-name', handler);
 ~~~
+
+## Use case
+
+* [Show a custom context menu at clicked position](/show-a-custom-context-menu-at-clicked-position)
 `}
 />
 <RelatedPosts
     slugs={[
+        'attach-event-handlers-inside-other-handlers',
         'attach-or-detach-an-event-handler',
+        'show-a-custom-context-menu-at-clicked-position',
     ]}
 />
 </>

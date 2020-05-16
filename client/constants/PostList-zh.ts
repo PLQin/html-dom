@@ -4,7 +4,7 @@ const PostList: Post[] = [
     { slug: 'add-or-remove-class-from-an-element', category: 'Basic', slugZh: '向元素添加或是删除 class 属性', categoryZh: '基础' },
     { slug: 'allow-to-enter-particular-characters-only', category: 'Intermediate', slugZh: '只允许输入特定字符', categoryZh: '中级' },
     { slug: 'append-to-an-element', category: 'Basic', slugZh: '将内容附加到一个元素中', categoryZh: '基础' },
-    { slug: 'attach-event-handlers-inside-other-handlers', category: 'Tip', slugZh: '', categoryZh: '技巧' },
+    { slug: 'attach-event-handlers-inside-other-handlers', category: 'Tip', slugZh: '将事件处理程序附加到其他处理程序中', categoryZh: '技巧' },
     { slug: 'attach-or-detach-an-event-handler', category: 'Basic', slugZh: '创建和删除一个事件处理', categoryZh: '基础' },
     { slug: 'calculate-the-mouse-position-relative-to-an-element', category: 'Basic', slugZh: '计算鼠标指正相对于元素的位置', categoryZh: '基础' },
     { slug: 'calculate-the-size-of-scrollbar', category: 'Intermediate', slugZh: '计算滚动条尺寸', categoryZh: '中级' },

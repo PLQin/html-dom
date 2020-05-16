@@ -37,9 +37,8 @@ const isDateInputSupported = function() {
 
 相关链接: [HTML5 输入类型兼容性](https://caniuse.com/#search=input%3A%20type%3D)
 `}
-/>
-<RelatedPosts
-    slugs={[
+/>  slugs={[
+        'create-a-range-slider',
         'create-an-element',
         'get-set-and-remove-attributes',
     ]}
