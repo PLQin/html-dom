@@ -18,7 +18,7 @@ export default () => {
 </Helmet>
 <Markdown
     content={`
-The following functions return \`true\` if the \`ele\` element is visible in the viewport:
+如果 \`ele\` 元素 在 viewport(可视区域) 中可见，以下函数则返回 \`true\` 
 
 ~~~ javascript
 const isInViewport = function(ele) {
@@ -35,7 +35,9 @@ const isInViewport = function(ele) {
 />
 <RelatedPosts
     slugs={[
+        'check-if-an-element-is-visible-in-a-scrollable-container',
         'get-the-document-height-and-width',
+        'scroll-an-element-to-ensure-it-is-visible-in-a-scrollable-container',
     ]}
 />
 </>

@@ -7,30 +7,30 @@ import RelatedPosts from '../../components/RelatedPosts';
 
 export default () => {
     return (
-<>
-<Helmet>
-    <meta name='keywords' content='display number of characters, maxlength attribute' />
-</Helmet>
-<Markdown
-    content={`
-Assume that we have a \`textarea\` and a normal \`div\` elements for showing how many characters user has been entering:
+        <>
+            <Helmet>
+                <meta name='keywords' content='display number of characters, maxlength attribute' />
+            </Helmet>
+            <Markdown
+                content={`
+假设我们有一个\`文本区\`和一个普通的 \`div\` 元素来显示用户输入了多少字符:
 
 ~~~ html
 <textarea id="message"></textarea>
 <div id="counter"></div>
 ~~~
 
-## Use the \`maxlength\` attribute
+## 使用 \`maxlength\` 属性
 
-The \`maxlength\` attribute sets the maximum number of characters that user can put in the textarea.
+\`maxlength\` 属性设置用户可以在文本区域中输入的最大字符数
 
 ~~~ html
 <textarea maxlength="200" id="message"></textarea>
 ~~~
 
-## Count the number of characters
+## 计算字符的数量
 
-Handle the \`input\` event which is triggered if the value of element is changed:
+处理元素的 value 值更改时触发的 \`input\` 事件: 
 
 ~~~ javascript
 const messageEle = document.getElementById('message');
@@ -39,31 +39,31 @@ const counterEle = document.getElementById('counter');
 messageEle.addEventListener('input', function(e) {
     const target = e.target;
 
-    // Get the \`maxlength\` attribute
+    // 获取 \`maxlength\` 属性
     const maxLength = target.getAttribute('maxlength');
 
-    // Count the current number of characters
+    // 计算当前的字符数
     const currentLength = target.value.length;
 
     counterEle.innerHTML = \`\${currentLength}/\${maxLength}\`;
 });
 ~~~
 
-> ## Good to know
+> ## 很高兴知道
 >
-> The common mistake is to capture the \`keyup\` event. It doesn't work in some cases such as:
-> * User drags a text into the textarea
-> * User right-clicks in the textarea and chooses _Paste_ from the context menu
+> 常见的错误是捕获 \`keyup\` 事件。在默写情况下将不会工作, 例如: 
+> * 用户拖拽文本到文本区域中
+> * 用户鼠标右击，在上下文菜单中选择 \`粘贴\`
 `}
-/>
-<Demo src='/demo/count-the-number-of-characters-of-a-textarea/index.html' />
-<RelatedPosts
-    slugs={[
-        'attach-or-detach-an-event-handler',
-        'get-or-set-the-html-of-an-element',
-        'get-set-and-remove-attributes',
-    ]}
-/>
-</>
+            />
+            <Demo src='/demo/count-the-number-of-characters-of-a-textarea/index.html' />
+            <RelatedPosts
+                slugs={[
+                    'attach-or-detach-an-event-handler',
+                    'get-or-set-the-html-of-an-element',
+                    'get-set-and-remove-attributes',
+                ]}
+            />
+        </>
     );
 };

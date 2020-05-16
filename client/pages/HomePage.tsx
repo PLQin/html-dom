@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
 
-import PostList from '../constants/PostList';
-import { unslugify } from '../helpers/slugify';
+import Ad from '../components/Ad';
+import PostItem from '../components/PostItem';
+import PostList from '../constants/PostList-zh';
 import Layout from './Layout';
 
 const HomePage = () => {
+    const [totalStars, setTotalStars] = useState(0);
+
+    useEffect(() => {
+        fetch('https://api.github.com/repos/phuoc-ng/html-dom')
+            .then(res => res.json())
+            .then(data => setTotalStars(data.stargazers_count))
+            .catch(console.log);
+    });
+
     return (
         <Layout>
             <Helmet>
@@ -22,38 +31,21 @@ const HomePage = () => {
                     className="text-2xl bg-gray-400 px-4 py-2"
                     href="https://github.com/PLQin/html-dom"
                     rel="noopener noreferrer"
-                    style={{ textDecoration: 'none' }}
                     target="_blank"
                 >
-                    GitHub
+                    GitHub ∙ {totalStars} ★
                 </a>
             </div>
-
             <div className='ml-auto mr-auto max-w-4xl'>
                 <ul>
                     {
                         PostList.map((post, index) => {
-                            const idx = (index < 9) ? `0${index + 1}` : `${index + 1}`;
                             return (
-                                <li key={post.slug} className='mb-4'>
-                                    <Link
-                                        to={`/${post.slug}`}
-                                        className='bg-gray-200 px-2 py-1 flex items-center justify-between'
-                                    >
-                                        <span className='mr-2'>{idx} — {post.zh || unslugify(post.slug)}</span>
-                                        <span
-                                            className={`
-
-                                            p-1 text-sm text-white rounded
-                                            ${post.level === 'Basic' ? 'bg-gray-600' : ''}
-                                            ${post.level === 'Intermediate' ? 'bg-blue-600' : ''}
-                                            ${post.level === 'Advanced' ? 'bg-red-600' : ''}
-                                        `}
-                                        >
-                                            {post.zhLevel || post.level.toLowerCase()}
-                                        </span>
-                                    </Link>
-                                </li>
+                                <PostItem
+                                    key={post.slug}
+                                    post={post}
+                                    renderTitle={(title) => `${index + 1} — ${title}`}
+                                />
                             );
                         })
                     }

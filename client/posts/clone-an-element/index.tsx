@@ -12,10 +12,9 @@ export default () => {
 const cloned = ele.cloneNode(true);
 ~~~
 
-Using the \`cloneNode(true)\` method will deep copy a given element. In the sample code above, all attributes and children of the original node \`ele\`
-will be cloned in \`cloned\` as well.
+使用 \`cloneNode(true)\` 方法将深度复制指定元素。在上面的示例代码中，原始元素 ele 的所有属性与子元素都将被 \`克隆\`。
 
-Passing \`false\` produces a cloned node that keeps only the attributes and the original node:
+传递 \`false\` 只会复制一个元素，该元素只会保留所有的属性和原始元素: 
 
 ~~~ javascript
 const cloned = ele.cloneNode(false);
@@ -26,6 +25,7 @@ const cloned = ele.cloneNode(false);
     slugs={[
         'drag-and-drop-table-column',
         'drag-and-drop-table-row',
+        'print-an-image',
     ]}
 />
 </>

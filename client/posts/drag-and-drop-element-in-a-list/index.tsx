@@ -55,7 +55,7 @@ let x = 0;
 let y = 0;
 
 const mouseDownHandler = function(e) {
-    const draggingEle = e.target;
+    draggingEle = e.target;
 
     // Calculate the mouse position
     const rect = draggingEle.getBoundingClientRect();
@@ -158,6 +158,8 @@ The placeholder will be [removed](/remove-an-element) as soon as the users drop 
 const mouseUpHandler = function() {
     // Remove the placeholder
     placeholder && placeholder.parentNode.removeChild(placeholder);
+    // Reset the flag
+    isDraggingStarted = false;
     
     ...
 };

@@ -8,36 +8,37 @@ export default () => {
 <>
 <Markdown
     content={`
-The following function returns \`true\` if the current browser supports the native date input \`<input type="date" />\`:
+如果当前浏览器支持使用 \`<input type="date" />\` 输入日期，则以下函数返回 \`true\`。
 
 ~~~ javascript
 const isDateInputSupported = function() {
-    // Create new input element
+    // 创建一个新的 input 元素
     const ele = document.createElement('input');
 
-    // Set the type attribute
+    // 设置 type 属性
     ele.setAttribute('type', 'date');
 
     const invalidValue = 'not-a-valid-date';
 
-    // Set an invalid value
+    // 设置无效显示值
     ele.setAttribute('value', invalidValue);
 
-    // If the browser supports the date input,
-    // it won't have effect on the \`value\` attribute
-    // \`ele.value\` will be an empty string
+    // 如果浏览器支持 date 类型输入
+    // 他不会对 \`value\` 属性产生影响
+    // \`ele.value\` 将会是一个空字符串
     // 
-    // In the other case, the input is treated as normal text input
-    // and \`ele.value\` returns the original value
+    // 在另一种情况下，input 被视为正常的文本输入
+    // 和 \`ele.value\` 返回原始值
     return ele.value !== invalidValue;
 };
 ~~~
 
-This approach can be used to check other HTML 5 input types such as \`email\`, \`url\`, etc.
+此函数也适用于其他的 HTML5 输入类型，例如: \`email\`, \`url\`。
+
+相关链接: [HTML5 输入类型兼容性](https://caniuse.com/#search=input%3A%20type%3D)
 `}
-/>
-<RelatedPosts
-    slugs={[
+/>  slugs={[
+        'create-a-range-slider',
         'create-an-element',
         'get-set-and-remove-attributes',
     ]}
