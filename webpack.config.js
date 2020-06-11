@@ -68,10 +68,14 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'source-map-loader',
             },
+            {
+                test: /\.md$/,
+                loader: 'raw-loader',
+            }
         ],
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.md'],
     },
     devtool: 'cheap-module-eavl-source-map',
     devServer: {
@@ -99,5 +103,5 @@ module.exports = {
                 },
             },
         },
-    }, 
+    },
 };

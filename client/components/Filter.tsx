@@ -13,10 +13,10 @@ const Filter: React.FC<{}> = () => {
     const onChangeSearchBox = (e: React.ChangeEvent<HTMLInputElement>) => setKeyword(e.target.value);
     const onClickTask = () => setKeyword('');
 
-    const allPosts = PostList.map((s) => ({ slug: unslugify(s.slug), zh: s.zh }));
+    const allPosts = PostList.map((s) => ({ slug: unslugify(s.slug), slugZh: s.slugZh }));
     const posts = keyword
-        ? allPosts.filter((v) => v.zh.includes(keyword) || v.slug.toLowerCase().includes(keyword.toLowerCase()))
-        : [];
+        ? allPosts.filter((v) => v.slugZh.includes(keyword))
+        : []
     return (
         <div className='w-full relative'>
             <div className={`border-b border-gray-400`}>
@@ -44,7 +44,7 @@ const Filter: React.FC<{}> = () => {
                     <ul>
                         {
                             posts.map((post, index) => {
-                                const { slug, zh } = post;
+                                const { slug, slugZh } = post;
                                 const title = slugify(slug);
                                 return (
                                     <li
@@ -54,9 +54,9 @@ const Filter: React.FC<{}> = () => {
                                         <Link
                                             onClick={onClickTask}
                                             to={`/${title}`}
-                                            title={zh || slug}
+                                            title={slugZh || slug}
                                         >
-                                            {zh || slug}
+                                            {slugZh || slug}
                                         </Link>
                                     </li>
                                 );

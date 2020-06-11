@@ -20,7 +20,7 @@ const PostList: Post[] = [
     { slug: 'check-if-the-touch-events-are-supported', category: 'Basic', slugZh: '', categoryZh: '基础' },
     { slug: 'clone-an-element', category: 'Basic', slugZh: '复制元素', categoryZh: '基础' },
     { slug: 'communication-between-an-iframe-and-its-parent-window', category: 'Intermediate', slugZh: 'iframe 与父级 window 之间的通信', categoryZh: '中级' },
-    { slug: 'copy-highlighted-code-to-the-clipboard', category: 'Advanced', slugZh: '', categoryZh: '高级' },
+    { slug: 'copy-highlighted-code-to-the-clipboard', category: 'Advanced', slugZh: '123135', categoryZh: '高级' },
     { slug: 'copy-text-to-the-clipboard', category: 'Intermediate', slugZh: '将文字复制到粘贴板上', categoryZh: '中级' },
     { slug: 'count-the-number-of-characters-of-a-textarea', category: 'Basic', slugZh: '计算文本区域(textarea)的字符数', categoryZh: '基础' },
     { slug: 'create-a-custom-scrollbar', category: 'Advanced', slugZh: '', categoryZh: '高级' },
