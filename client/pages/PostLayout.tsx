@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
-import PostList from '../constants/PostList';
+import PostList from '../constants/PostList-zh';
 import { slugify, unslugify } from '../helpers/slugify';
 import Layout from './Layout';
 
@@ -19,6 +19,24 @@ const PostLayout: React.FC<PostLayoutProps> = ({ children, slug }) => {
             return item;
         }
     });
+
+    useEffect(() => {
+        function TurnPage(e: any) {
+            if (e.keyCode === 39) {
+                window.location.href = slugify(PostList[index + 1].slug)
+            }
+            if (e.keyCode === 37) {
+                window.location.href = slugify(PostList[index - 1].slug)
+            }
+        }
+
+        document.addEventListener('keydown', TurnPage);
+
+        return () => {
+            document.removeEventListener('keydown', TurnPage)
+        }
+    }, []);
+
     return (
         <Layout>
             <Helmet>
